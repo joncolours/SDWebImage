@@ -75,7 +75,7 @@
             return YES;
         }
     }
-    if (@available(iOS 11.0, tvOS 11.0, watchOS 4.0, *)) {
+    if (@available(iOS 11.0, tvOS 11.0, watchOS 5.0, *)) {
         // PDF
         SEL PDFSelector = SD_SEL_SPI(CGPDFPage);
         if ([self respondsToSelector:PDFSelector] && [self performSelector:PDFSelector]) {
