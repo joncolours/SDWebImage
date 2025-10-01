@@ -317,7 +317,7 @@ static NSString * _defaultDiskCacheDirectory;
         return;
     }
     NSData *extendedData;
-    if (@available(iOS 11, tvOS 11, macOS 10.13, watchOS 4, *)) {
+    if (@available(iOS 11, tvOS 11, macOS 10.13, watchOS 5, *)) {
         NSError *error;
         extendedData = [NSKeyedArchiver archivedDataWithRootObject:extendedObject requiringSecureCoding:NO error:&error];
         if (error) {
@@ -573,7 +573,7 @@ static NSString * _defaultDiskCacheDirectory;
         return;
     }
     id extendedObject;
-    if (@available(iOS 11, tvOS 11, macOS 10.13, watchOS 4, *)) {
+    if (@available(iOS 11, tvOS 11, macOS 10.13, watchOS 5, *)) {
         NSError *error;
         NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:extendedData error:&error];
         unarchiver.requiresSecureCoding = NO;
